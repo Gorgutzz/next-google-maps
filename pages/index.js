@@ -7,8 +7,8 @@ const Index = () => (
     <div className="container-fluid grey">
         <div className="row">
             <div className="col">
-                <h1 className="text-center display-3">How To Use Google Geocoding API</h1>
-                <p className="lead text-center">Find the top attractions in an area by entering a valid address below!</p>
+                <h1 className="text-center display-3">Google Maps</h1>
+                <p className="lead text-center">Find the top attractions in an area</p>
             </div>
         </div>
         <style jsx>{`
