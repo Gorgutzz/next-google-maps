@@ -24,6 +24,16 @@ export default async (req, res) => {
                         "x-rapidapi-host": "tripadvisor1.p.rapidapi.com","x-rapidapi-key": process.env.RAPIDAPI_KEY
                     }
                 })
+                const attractionsData = await attractions.json()
+                const attractionsList = attractionsData.data
+                res.status(200).json({
+                    lat,
+                    long,
+                    attractionsList
+                })
+          } catch (e) {
+              res.status(400).send()
+          }
         break
       default:
         res.setHeader('Allow', ['POST'])
