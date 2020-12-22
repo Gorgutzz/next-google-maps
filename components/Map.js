@@ -20,5 +20,26 @@ const MapComponent = withScriptjs(withGoogleMap((props) => (
     </GoogleMap>
 )))
 
+const Main = () => {
+    let [latitude, setLatitude] = React.useState(-33.7560119)
+    let [longitude, setLongitude] = React.useState(150.6038367)
+    let [attractions, setAttractions] = React.useState([])
+    let [address, setAddress] = React.useState('')
+    let [message, setMessage] = React.useState({})
+
+    const updateCoordinates = (e) => {
+        e.preventDefault()
+
+        setMessage({text: 'Loading..', variant: 'info'})
+
+        const data = {
+            address
+        }
+
+    }
+
+    return (
+    )
+}
 
 export default Main
