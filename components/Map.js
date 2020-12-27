@@ -36,6 +36,24 @@ const Main = () => {
             address
         }
 
+        fetch('/api/geocoding', {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(response => {
+            setAttractions(response.attractionsList)
+            setLatitude(response.lat)
+            setLongitude(response.long)
+            setMessage({})
+        })
+        .catch(() => setMessage({text: 'Something went wrong..', variant: 'danger'})
+        )
     }
 
     return (
