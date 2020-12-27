@@ -76,6 +76,28 @@ const Main = () => {
                 </div>
                 <button className="btn mb-4 btn-primary" type='submit'>Search Location</button>
             </form>
+            <MapComponent
+                lat={latitude}
+                long={longitude}
+                attractions={attractions}
+                isMarkerShown
+                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                loadingElement={<div style={{ height: `100%` }} />}
+                containerElement={<div style={{ height: `400px` }} />}
+                mapElement={<div style={{ height: `100%` }} />}
+                />
+            <style jsx>{`
+                form {
+                    margin: 2rem;
+                    background: white;
+                    border-radius: 5px;
+                    padding: 1rem;
+                }
+                p {
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+            `}</style>
         </div>
     )
 }
