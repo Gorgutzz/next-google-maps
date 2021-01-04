@@ -1,4 +1,6 @@
+import Map from '../components/Map'
 import Head from 'next/head'
+
 const Index = () => (
   <>
     <Head>
@@ -7,8 +9,9 @@ const Index = () => (
     <div className="container-fluid grey">
         <div className="row">
             <div className="col">
-                <h1 className="text-center display-3">Google Maps</h1>
-                <p className="lead text-center">Find the top attractions in an area</p>
+                <h1 className="text-center display-3">Google Map</h1>
+                <p className="lead text-center">Find the top attractions in an area by entering a valid address below!</p>
+                <Map />  // new
             </div>
         </div>
         <style jsx>{`
@@ -23,4 +26,5 @@ const Index = () => (
     </div>
   </>
 );
+
 export default Index;
